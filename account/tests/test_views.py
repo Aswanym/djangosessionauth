@@ -8,7 +8,7 @@ from django.contrib.auth.tokens import default_token_generator
 
 
 def _get_csrf_token(self):
-    response = self.client.get(reverse ('csrf_cookie'))
+    response = self.client.get(reverse('csrf_cookie'))
     # send a GET request to csrf_cookie endpoint
     return response.cookies['csrftoken'].value
 
